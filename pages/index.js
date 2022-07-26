@@ -9,7 +9,7 @@ const Main = () => {
         <title>Ryan Thomas | Portfolio</title>
       </Head>
       <Home />
-      <Projects />
+      {/* <Projects /> */}
     </div>
   );
 };

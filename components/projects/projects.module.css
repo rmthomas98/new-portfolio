@@ -12,3 +12,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.imageContainer {
+  width: 200px;
+  position: relative;
+}
