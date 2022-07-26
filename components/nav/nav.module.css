@@ -1,0 +1,35 @@
+.wrapper {
+  padding: 12px 16px;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centerContainer {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+}
+
+.rightContainer {
+  padding-top: 2px;
+}
+
+.switch {
+  position: relative;
+  bottom: 5px;
+}
