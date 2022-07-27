@@ -1,11 +1,11 @@
 .wrapper {
-  padding: 16px 20px;
-  height: calc(100vh - 32px);
-  min-height: 600px;
+  padding: 16px 30px;
+  height: calc(100vh);
+  min-height: 700px;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 850px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -30,15 +30,15 @@
 .name {
   font-size: min(max(46px, 10vw), 100px);
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .header {
   font-size: min(max(36px, 8vw), 70px);
-  background: linear-gradient(to right, #24c6dc, #514a9d);
-  background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #62ffa4);
   background-clip: text;
-  max-width: fit-content;
+  animation: gradient 5s infinite;
+  font-weight: 700;
 }
 
 .description {
@@ -48,4 +48,13 @@
 
 .buttonContainer {
   margin-top: 16px;
+}
+
+@keyframes gradient {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }

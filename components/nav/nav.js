@@ -1,8 +1,29 @@
 import styles from "./nav.module.css";
-import { Text, Tabs, Button, Tooltip, Toggle, Spacer } from "@geist-ui/core";
+import {
+  Text,
+  Tabs,
+  Button,
+  Tooltip,
+  Toggle,
+  Spacer,
+  Display,
+} from "@geist-ui/core";
 import { Github, Twitter, Linkedin } from "@geist-ui/icons";
+import { useEffect, useState } from "react";
+import { useScrollDirection } from "use-scroll-direction";
 
 export const Nav = ({ theme, setTheme }) => {
+  const { isScrollingUp, scrollDirection } = useScrollDirection();
+  const [isActive, setIsActive] = useState(true);
+
+  useEffect(() => {
+    if (scrollDirection === "UP") {
+      setIsActive(true);
+    } else if (scrollDirection === "DOWN") {
+      setIsActive(false);
+    }
+  }, [scrollDirection]);
+
   const handleThemeChange = () => {
     if (theme === "light") {
       localStorage.setItem("theme", "dark");
@@ -15,7 +36,17 @@ export const Nav = ({ theme, setTheme }) => {
 
   return (
     <>
-      <div className={styles.wrapper}>
+      <div
+        className={styles.wrapper}
+        style={{
+          opacity: isActive ? 1 : 0,
+          zIndex: isActive ? 9 : -1,
+          height: isActive ? 60.33 : 0,
+          background: theme === "dark" ? "#000000b7" : "#ffffffb7",
+          borderBottom:
+            theme === "dark" ? "1px solid #333" : "1px solid #EAEAEA",
+        }}
+      >
         <div className={styles.container}>
           <Text h4 margin={0}>
             Ryan Thomas

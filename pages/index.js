@@ -1,15 +1,15 @@
 import Head from "next/head";
 import { Home } from "../components/home/home";
-import { Projects } from "../components/projects/projects";
+import { About } from "../components/about/about";
 
 const Main = () => {
   return (
     <div>
       <Head>
-        <title>Ryan Thomas | Portfolio</title>
+        <title>Ryan Thomas | Web Developer</title>
       </Head>
       <Home />
-      {/* <Projects /> */}
+      <About />
     </div>
   );
 };

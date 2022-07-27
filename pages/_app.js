@@ -5,7 +5,7 @@ import "../styles/globals.css";
 import { ThemeContext } from "../components/themeContext";
 
 const MyApp = ({ Component, pageProps }) => {
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -16,7 +16,7 @@ const MyApp = ({ Component, pageProps }) => {
         setTheme("dark");
       }
     } else {
-      setTheme("light");
+      setTheme("dark");
     }
   }, []);
 

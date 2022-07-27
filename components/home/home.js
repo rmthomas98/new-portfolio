@@ -14,6 +14,7 @@ export const Home = () => {
             className={styles.code}
             style={{ color: "GrayText" }}
             margin={0}
+            ml={0.4}
           >
             Welcome, I&#39;m
           </Text>
@@ -33,7 +34,7 @@ export const Home = () => {
             exceptional web apps along with many other things.
           </Text>
           <div className={styles.buttonContainer}>
-            <Button style={{ minWidth: 150 }} type="success">
+            <Button style={{ minWidth: 150 }} type="secondary">
               View Work
             </Button>
             <Spacer />

@@ -1,0 +1,92 @@
+.wrapper {
+  padding: 16px 30px;
+  padding-bottom: 100px;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  min-width: fit-content;
+}
+
+.line {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #0070f3;
+  /* animation: gradient 5s infinite; */
+  max-width: 250px;
+}
+
+.code {
+  font-family: "Space Mono", monospace;
+  font-size: min(max(14px, 2vw), 16px);
+  position: relative;
+  top: 1px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  font-size: min(max(14px, 2vw), 16px);
+  max-width: 430px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer:hover::after {
+  top: 6px;
+  left: 6px;
+}
+
+.image {
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.backgroundBorder {
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #62ffa4);
+  animation: gradient 5s infinite;
+  height: 98%;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 6px;
+  top: 14px;
+  left: 14px;
+}
+
+.background {
+  height: 98.2%;
+  width: 98%;
+  background: #000;
+  z-index: 9999;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  border-radius: 5px;
+}
+
+@keyframes gradient {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
