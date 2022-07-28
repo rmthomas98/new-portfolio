@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Home } from "../components/home/home";
 import { About } from "../components/about/about";
+import { FeaturedProjects } from "../components/featuredProjects/featuredProjects";
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       </Head>
       <Home />
       <About />
+      <FeaturedProjects />
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { ThemeContext } from "../themeContext";
 import { useContext } from "react";
 
 export const Home = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -12,7 +14,7 @@ export const Home = () => {
           <Text
             p
             className={styles.code}
-            style={{ color: "GrayText" }}
+            style={{ color: theme === "dark" ? "gray" : "GrayText" }}
             margin={0}
             ml={0.4}
           >
@@ -29,7 +31,11 @@ export const Home = () => {
           >
             I build web apps.
           </Text>
-          <Text p style={{ color: "GrayText" }} className={styles.description}>
+          <Text
+            p
+            style={{ color: theme === "dark" ? "gray" : "GrayText" }}
+            className={styles.description}
+          >
             I&#39;m a full stack software developer focusing on building
             exceptional web apps along with many other things.
           </Text>

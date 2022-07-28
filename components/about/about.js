@@ -3,6 +3,8 @@ import { Text, Spacer, Card, Button, Display } from "@geist-ui/core";
 import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext";
+import { ChevronsRight } from "@geist-ui/icons";
+import { tech } from "../../data/tech";
 
 export const About = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -14,7 +16,7 @@ export const About = () => {
           <Text
             span
             className={styles.code}
-            style={{ color: "GrayText" }}
+            style={{ color: theme === "dark" ? "gray" : "GrayText" }}
             margin={0}
           >
             01.
@@ -24,21 +26,80 @@ export const About = () => {
             About Me
           </Text>
           <Spacer />
-          <span className={styles.line}></span>
+          <span
+            className={styles.line}
+            // style={{ background: theme === "dark" ? "#333" : "#EAEAEA" }}
+            style={{ background: theme === "dark" ? "#0070F3" : "#3291FF" }}
+          ></span>
         </div>
         <Spacer h={3} />
         <div className={styles.flexContainer}>
           <div className={styles.infoContainer}>
             <Text
               p
-              style={{ color: "GrayText" }}
+              style={{ color: theme === "dark" ? "gray" : "GrayText" }}
               className={styles.description}
               margin={0}
+              small
             >
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Hello! I'm Ryan, a software developer based out of Dayton, Ohio. I
+              really enjoy creating beautiful applications for the web. My goal
+              is to build scalable, performant, and user friendly applications.
             </Text>
+            <Spacer />
+            <Text
+              small
+              style={{ color: theme === "dark" ? "gray" : "GrayText" }}
+            >
+              Technology I've recently been working with:
+            </Text>
+            <Spacer />
+            <div className={styles.techContainer}>
+              {tech.slice(0, 3).map((tech, index) => {
+                return (
+                  <>
+                    <div className={styles.tech} key={index}>
+                      <ChevronsRight size={14} color="#0070F3" />
+                      <Text
+                        span
+                        font="12px"
+                        className={styles.techName}
+                        ml={0.3}
+                        style={{
+                          color: theme === "dark" ? "gray" : "GrayText",
+                        }}
+                      >
+                        {tech}
+                      </Text>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+            <Spacer h={0.6} />
+            <div className={styles.techContainer}>
+              {tech.slice(3).map((tech, index) => {
+                return (
+                  <>
+                    <div className={styles.tech} key={index}>
+                      <ChevronsRight size={14} color="#0070F3" />
+                      <Text
+                        span
+                        font="12px"
+                        className={styles.techName}
+                        ml={0.3}
+                        style={{
+                          color: theme === "dark" ? "gray" : "GrayText",
+                        }}
+                      >
+                        {tech}
+                      </Text>
+                    </div>
+                    <Spacer />
+                  </>
+                );
+              })}
+            </div>
           </div>
           <Spacer />
           <div className={styles.imageContainer}>
