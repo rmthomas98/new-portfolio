@@ -108,11 +108,14 @@ export const Nav = ({ theme, setTheme }) => {
             <div className={styles.spacerContainer}>
               <Spacer w={0.4} />
             </div>
-            <Menu className={styles.menu} />
+            <Menu
+              className={styles.menu}
+              onClick={() => setNavIsActive(true)}
+            />
           </div>
         </div>
       </div>
-      {/* <MobileNav navIsActive={navIsActive} setNavIsActive={setNavIsActive} /> */}
+      <MobileNav navIsActive={navIsActive} setNavIsActive={setNavIsActive} />
     </>
   );
 };

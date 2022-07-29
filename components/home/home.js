@@ -5,7 +5,7 @@ import { ThemeContext } from "../themeContext";
 import { useContext } from "react";
 
 export const Home = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div className={styles.wrapper}>

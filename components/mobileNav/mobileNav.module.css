@@ -1,0 +1,14 @@
+.drawerContainer {
+  width: 200px;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.linkContainer:hover {
+  color: red !important;
+}
