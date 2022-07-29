@@ -3,7 +3,7 @@ export const data = [
     title: "001",
     name: "MiniDoodles",
     description:
-      "I made this webiste for a client who wanted to have a website where they would be able to show their dogs.",
+      "I made this website for a client who wanted to be able to show their dogs.",
     stack: ["React", "CSS"],
     link: "https://cloversminigoldendoodles.com",
     github: "https://github.com/rmthomas98/cloversminigoldendoodles",
@@ -11,7 +11,8 @@ export const data = [
   {
     title: "002",
     name: "Dashboard",
-    description: "I made this small web app with a big focus on the UI.",
+    description:
+      "I made this small web app with a big focus on the UI and to get chart practice.",
     stack: ["React", "Tailwind CSS"],
     link: "https://adoring-cray-0da24f.netlify.app/",
     github: "https://github.com/rmthomas98/dashboard",
@@ -21,16 +22,16 @@ export const data = [
     name: "Darkpine",
     description:
       "This is a simple landing page with a pricing page and sign up form.",
-    stack: ["Next.js", "Node.js", "MongoDB", "CSS"],
+    stack: ["Next.js", "MongoDB", "CSS"],
     link: "https://darkpine.io",
     github: "https://github.com/rmthomas98/darkpine",
   },
   {
     title: "004",
-    name: "Platinum Powerwashing",
+    name: "Platinum",
     description:
       "I made this website for a client who wanted a website for their business.",
-    stack: ["Next.js", "Node.js", "CSS"],
+    stack: ["Next.js", "CSS"],
     link: "https://platinumpowerwashing.io",
     github: "https://github.com/rmthomas98/powerwashing",
   },
@@ -45,7 +46,7 @@ export const data = [
   },
   {
     title: "006",
-    name: "Movie Explorer",
+    name: "MovieExplorer",
     description:
       "I made this website using the IMDb REST API, you can search for movies and see their details.",
     stack: ["React", "CSS"],

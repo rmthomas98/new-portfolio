@@ -28,25 +28,34 @@
 }
 
 .code {
-  font-family: "Space Mono", monospace;
+  font-family: "Space Mono", monospace !important;
   font-size: min(max(14px, 2vw), 16px);
   position: relative;
   top: 1px;
 }
 
-.mainFlexContainer {
-  width: 100%;
-}
-
 .flexContainer {
   display: flex;
-  width: 100%;
 }
 
-.title {
-  font-family: "Space Mono", monospace;
+.cardContainer {
+  width: 100% !important;
+  height: 250px !important;
+  position: relative;
 }
 
-.card {
-  margin-right: 10px;
+.nameContainer {
+  display: flex;
+  align-items: center;
+}
+
+.badgeContainer {
+  position: absolute;
+  bottom: 64px;
+}
+
+.buttonContainer {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
 }

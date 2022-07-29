@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Home } from "../components/home/home";
 import { About } from "../components/about/about";
 import { FeaturedProjects } from "../components/featuredProjects/featuredProjects";
-import { OtherProjects } from "../components/OtherProjects/OtherProjects";
+import { Projects } from "../components/projects/projects";
 
 const Main = () => {
   return (
@@ -13,7 +13,7 @@ const Main = () => {
       <Home />
       <About />
       <FeaturedProjects />
-      <OtherProjects />
+      <Projects />
     </div>
   );
 };

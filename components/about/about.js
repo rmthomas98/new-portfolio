@@ -57,7 +57,7 @@ export const About = () => {
             <div className={styles.techContainer}>
               {tech.slice(0, 3).map((tech, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} style={{ width: "100%" }}>
                     <div className={styles.tech}>
                       <ChevronsRight size={14} color="#0070F3" />
                       <Text
@@ -80,7 +80,7 @@ export const About = () => {
             <div className={styles.techContainer}>
               {tech.slice(3).map((tech, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} style={{ width: "100%" }}>
                     <div className={styles.tech}>
                       <ChevronsRight size={14} color="#0070F3" />
                       <Text
