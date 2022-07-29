@@ -1,12 +1,55 @@
 export const data = [
   {
     title: "001",
-    image: "/images/assistantai.PNG",
-    name: "AssistantAI",
+    name: "MiniDoodles",
     description:
-      "This is a web application that uses artificial intelligence to assist the user in the creation of a tweet.",
-    stack: "Next.js, PostgreSQL, NextUI",
-    link: "https://assistantai.io",
-    github: "https://github.com/rmthomas98/assistant-ai",
+      "I made this webiste for a client who wanted to have a website where they would be able to show their dogs.",
+    stack: ["React", "CSS"],
+    link: "https://cloversminigoldendoodles.com",
+    github: "https://github.com/rmthomas98/cloversminigoldendoodles",
+  },
+  {
+    title: "002",
+    name: "Dashboard",
+    description: "I made this small web app with a big focus on the UI.",
+    stack: ["React", "Tailwind CSS"],
+    link: "https://adoring-cray-0da24f.netlify.app/",
+    github: "https://github.com/rmthomas98/dashboard",
+  },
+  {
+    title: "003",
+    name: "Darkpine",
+    description:
+      "This is a simple landing page with a pricing page and sign up form.",
+    stack: ["Next.js", "Node.js", "MongoDB", "CSS"],
+    link: "https://darkpine.io",
+    github: "https://github.com/rmthomas98/darkpine",
+  },
+  {
+    title: "004",
+    name: "Platinum Powerwashing",
+    description:
+      "I made this website for a client who wanted a website for their business.",
+    stack: ["Next.js", "Node.js", "CSS"],
+    link: "https://platinumpowerwashing.io",
+    github: "https://github.com/rmthomas98/powerwashing",
+  },
+  {
+    title: "005",
+    name: "TradeClub",
+    description:
+      "This was an existing website that I redid and made imporovements on.",
+    stack: ["React", "JavaScript", "CSS"],
+    link: "https://tradeclub.vercel.net",
+    github: "https://github.com/rmthomas98/tradeclub",
+  },
+  {
+    title: "006",
+    name: "Movie Explorer",
+    description:
+      "I made this website using the IMDb REST API, you can search for movies and see their details.",
+    stack: ["React", "CSS"],
+    link: "https://affectionate-hypatia-176903.netlify.app/",
+    github: "https://github.com/rmthomas98/movies",
   },
 ];
