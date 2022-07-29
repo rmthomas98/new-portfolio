@@ -40,6 +40,10 @@
   margin-bottom: 200px;
 }
 
+.lastProjectContainer {
+  margin-bottom: 100px;
+}
+
 .imageContainer {
   box-shadow: 0 5px 14px rgb(0 0 0 / 20%);
   display: flex;
@@ -77,6 +81,10 @@
   z-index: 1;
 }
 
+.descriptionText {
+  font-size: min(max(12px, 2vw), 14px);
+}
+
 .badgeContainer {
   display: flex;
   justify-content: flex-end;
@@ -95,4 +103,10 @@
 .buttonContainerTwo {
   display: flex;
   justify-content: flex-start;
+}
+
+@media screen and (max-width: 500px) {
+  .lastProjectContainer {
+    margin-bottom: 200px;
+  }
 }

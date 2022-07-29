@@ -1,20 +1,16 @@
 import styles from "./nav.module.css";
-import {
-  Text,
-  Tabs,
-  Button,
-  Tooltip,
-  Toggle,
-  Spacer,
-  Display,
-} from "@geist-ui/core";
-import { Github, Twitter, Linkedin } from "@geist-ui/icons";
+import { Text, Tabs, Button, Tooltip, Toggle, Spacer } from "@geist-ui/core";
+import { Github, Twitter, Linkedin, Menu } from "@geist-ui/icons";
 import { useEffect, useState } from "react";
 import { useScrollDirection } from "use-scroll-direction";
+import { useWindowWidth } from "@react-hook/window-size";
+import { MobileNav } from "../mobileNav/mobileNav";
 
 export const Nav = ({ theme, setTheme }) => {
-  const { isScrollingUp, scrollDirection } = useScrollDirection();
+  const { scrollDirection } = useScrollDirection();
   const [isActive, setIsActive] = useState(true);
+  const [navIsActive, setNavIsActive] = useState(false);
+  const width = useWindowWidth();
 
   useEffect(() => {
     if (scrollDirection === "UP") {
@@ -71,31 +67,52 @@ export const Nav = ({ theme, setTheme }) => {
             </Tabs>
           </div>
           <div className={styles.rightContainer}>
-            <Toggle
-              mr={1}
-              className={styles.switch}
-              checked={theme === "dark"}
-              scale={0.8}
-              onChange={handleThemeChange}
-            />
+            <div className={styles.switchContainer}>
+              <Toggle
+                mr={1}
+                className={styles.switch}
+                checked={theme === "dark"}
+                scale={0.8}
+                onChange={handleThemeChange}
+              />
+            </div>
             <Tooltip text={"Github"} placement="bottomEnd" py={0.6}>
-              <Button icon={<Github />} auto scale={2 / 3} px={0.6} />
+              <a
+                href="https://github.com/rmthomas98"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button icon={<Github />} auto scale={2 / 3} px={0.6} />
+              </a>
             </Tooltip>
             <Spacer w={0.4} />
             <Tooltip text={"LinkedIn"} placement="bottomEnd" py={0.6}>
-              <Button icon={<Linkedin />} auto scale={2 / 3} px={0.6} />
+              <a
+                href="https://www.linkedin.com/in/ryan-thomas-4b3b961a5/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button icon={<Linkedin />} auto scale={2 / 3} px={0.6} />
+              </a>
             </Tooltip>
-            {/* <Spacer w={0.4} />
-            <Tooltip text={"Resume"} placement="bottomEnd" py={0.6}>
-              <Button icon={<File />} auto scale={2 / 3} px={0.6} />
-            </Tooltip> */}
             <Spacer w={0.4} />
             <Tooltip text={"Twitter"} placement="bottomEnd" py={0.6}>
-              <Button icon={<Twitter />} auto scale={2 / 3} px={0.6} />
+              <a
+                href="https://twitter.com/codethematrix"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button icon={<Twitter />} auto scale={2 / 3} px={0.6} />
+              </a>
             </Tooltip>
+            <div className={styles.spacerContainer}>
+              <Spacer w={0.4} />
+            </div>
+            <Menu className={styles.menu} />
           </div>
         </div>
       </div>
+      {/* <MobileNav navIsActive={navIsActive} setNavIsActive={setNavIsActive} /> */}
     </>
   );
 };

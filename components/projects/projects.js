@@ -43,7 +43,7 @@ export const Projects = () => {
                         className={styles.code}
                         font="12px"
                         style={{
-                          color: theme === "dark" ? "gray" : "darkgray",
+                          color: theme === "dark" ? "gray" : "GrayText",
                         }}
                       >
                         {project.title}
@@ -86,12 +86,12 @@ export const Projects = () => {
                       </div>
                     </Card.Content>
                   </Card>
-                  {index !== 2 && <Spacer w={2} />}
+                  {index !== 2 && <Spacer w={3} />}
                 </>
               );
             })}
           </div>
-          <div className={styles.flexContainer} style={{ marginTop: 10 }}>
+          <div className={`${styles.flexContainer} ${styles.flexTwo}`}>
             {data.slice(3).map((project, index) => {
               return (
                 <>
@@ -101,7 +101,7 @@ export const Projects = () => {
                         className={styles.code}
                         font="12px"
                         style={{
-                          color: theme === "dark" ? "gray" : "darkgray",
+                          color: theme === "dark" ? "gray" : "GrayText",
                         }}
                       >
                         {project.title}
@@ -144,7 +144,7 @@ export const Projects = () => {
                       </div>
                     </Card.Content>
                   </Card>
-                  {index !== 2 && <Spacer w={2} />}
+                  {index !== 2 && <Spacer w={3} />}
                 </>
               );
             })}

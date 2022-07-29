@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "../themeContext";
 import { ChevronsRight } from "@geist-ui/icons";
-import { tech } from "../../data/tech";
+import { recentTech } from "../../data/recentTech";
 
 export const About = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -55,7 +55,7 @@ export const About = () => {
             </Text>
             <Spacer />
             <div className={styles.techContainer}>
-              {tech.slice(0, 3).map((tech, index) => {
+              {recentTech.slice(0, 3).map((tech, index) => {
                 return (
                   <div key={index} style={{ width: "100%" }}>
                     <div className={styles.tech}>
@@ -78,7 +78,7 @@ export const About = () => {
             </div>
             <Spacer h={0.6} />
             <div className={styles.techContainer}>
-              {tech.slice(3).map((tech, index) => {
+              {recentTech.slice(3).map((tech, index) => {
                 return (
                   <div key={index} style={{ width: "100%" }}>
                     <div className={styles.tech}>

@@ -31,3 +31,39 @@
   display: flex;
   align-items: center;
 }
+
+.menu {
+  display: none;
+}
+
+.spacerContainer {
+  display: none;
+}
+
+.switchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 2px;
+  position: relative;
+}
+
+@media screen and (max-width: 650px) {
+  .centerContainer {
+    display: none;
+  }
+  .menu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  .spacerContainer {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .switchContainer {
+    display: none;
+  }
+}

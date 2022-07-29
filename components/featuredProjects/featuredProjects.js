@@ -69,7 +69,7 @@ export const FeaturedProjects = () => {
                 </Text>
                 <Text
                   p
-                  small
+                  className={styles.descriptionText}
                   style={{ color: theme === "dark" ? "gray" : "GrayText" }}
                   mt={0}
                 >
@@ -124,7 +124,7 @@ export const FeaturedProjects = () => {
                 </Text>
                 <Text
                   p
-                  small
+                  className={styles.descriptionText}
                   style={{ color: theme === "dark" ? "gray" : "GrayText" }}
                   mt={0}
                 >
@@ -173,7 +173,9 @@ export const FeaturedProjects = () => {
             />
           </div>
         </div>
-        <div className={styles.projectContainer}>
+        <div
+          className={`${styles.projectContainer} ${styles.lastProjectContainer}`}
+        >
           <div className={styles.imageContainer}>
             <Image
               className={styles.image}
@@ -198,7 +200,7 @@ export const FeaturedProjects = () => {
                 </Text>
                 <Text
                   p
-                  small
+                  className={styles.descriptionText}
                   style={{ color: theme === "dark" ? "gray" : "GrayText" }}
                   mt={0}
                 >

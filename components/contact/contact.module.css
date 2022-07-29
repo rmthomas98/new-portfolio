@@ -38,63 +38,27 @@
   display: flex;
 }
 
-.flexTwo {
-  margin-top: 16px;
-}
-
-.cardContainer {
-  width: 100% !important;
-  height: 250px !important;
-  position: relative;
-}
-
-.nameContainer {
+.cardContentContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .name {
   font-family: "Space mono", monospace;
-  font-weight: 500;
+  font-size: min(max(12px, 2vw), 14px);
 }
 
-.badgeContainer {
-  position: absolute;
-  bottom: 64px;
+.formContainer {
+  width: 100%;
 }
 
-.buttonContainer {
+.formFlexContainer {
   display: flex;
-  position: absolute;
-  bottom: 20px;
-}
-
-@media screen and (max-width: 700px) {
-  .projectContainer {
-    display: flex;
-  }
-  .flexContainer {
-    flex-direction: column;
-    margin-right: 16px;
-    width: 100%;
-  }
-  .flexTwo {
-    margin-top: 0;
-    margin-right: 0;
-  }
 }
 
 @media screen and (max-width: 520px) {
-  .projectContainer {
-    display: block;
-  }
   .flexContainer {
-    margin-right: 0;
-  }
-  .flexTwo {
-    margin-top: 16px;
-  }
-  .cardContainer {
-    height: 230px !important;
+    flex-direction: column;
   }
 }
