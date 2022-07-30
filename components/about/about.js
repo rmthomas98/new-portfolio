@@ -42,9 +42,10 @@ export const About = () => {
               margin={0}
               small
             >
-              Hello! I'm Ryan, a software developer based out of Dayton, Ohio. I
-              really enjoy creating beautiful applications for the web. My goal
-              is to build scalable, performant, and user friendly applications.
+              Hello! I&#39;m Ryan, a software developer based out of Dayton,
+              Ohio. I really enjoy creating beautiful applications for the web.
+              My goal is to build scalable, performant, and user friendly
+              applications.
             </Text>
             <Spacer />
             <Text
