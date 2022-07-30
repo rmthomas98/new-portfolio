@@ -1,14 +1,54 @@
 import styles from "./contact.module.css";
-import { Text, Spacer, Card, Button, Input, Textarea } from "@geist-ui/core";
-import { useContext } from "react";
+import {
+  Text,
+  Spacer,
+  Card,
+  Button,
+  Input,
+  Textarea,
+  useToasts,
+} from "@geist-ui/core";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../themeContext";
 import { Mail, Phone, Send } from "@geist-ui/icons";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 export const Contact = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const [isLoading, setIsLoading] = useState(false);
+  const { setToast } = useToasts();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const submit = async (data) => {
+    setIsLoading(true);
+    const response = await axios.post("/api/send-message", data);
+    if (response.data === "success") {
+      reset();
+      setIsLoading(false);
+      setToast({
+        type: "success",
+        text: "Message sent successfully!",
+        delay: 6000,
+      });
+    } else {
+      setIsLoading(false);
+      setToast({
+        type: "error",
+        text: "Error sending message!",
+        delay: 6000,
+      });
+    }
+  };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="contact">
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <Text
@@ -32,7 +72,11 @@ export const Contact = () => {
         </div>
         <Spacer h={4} />
         <div className={styles.flexContainer}>
-          <Card shadow style={{ width: "100%" }}>
+          <Card
+            shadow={theme === "dark" ? false : true}
+            hoverable
+            style={{ width: "100%" }}
+          >
             <Card.Content className={styles.cardContentContainer}>
               <Mail />
               <Text
@@ -41,11 +85,17 @@ export const Contact = () => {
               >
                 ryanmthomas01@gmail.com
               </Text>
-              <Button scale={1 / 2}>Send Message</Button>
+              <a href="mailto:ryanmthomas01@gmail.com">
+                <Button scale={1 / 2}>Send Message</Button>
+              </a>
             </Card.Content>
           </Card>
           <Spacer w={2} />
-          <Card shadow style={{ width: "100%" }}>
+          <Card
+            shadow={theme === "dark" ? false : true}
+            hoverable
+            style={{ width: "100%" }}
+          >
             <Card.Content className={styles.cardContentContainer}>
               <Phone />
               <Text
@@ -54,7 +104,9 @@ export const Contact = () => {
               >
                 (937)-789-8988
               </Text>
-              <Button scale={1 / 2}>Call Now</Button>
+              <a href="tel:9377898888">
+                <Button scale={1 / 2}>Call Now</Button>
+              </a>
             </Card.Content>
           </Card>
         </div>
@@ -62,23 +114,75 @@ export const Contact = () => {
         <Text
           style={{
             textAlign: "center",
-            color: theme === "dark" ? "gray" : "GrayText",
+            // color: theme === "dark" ? "gray" : "GrayText",
           }}
           className={styles.name}
         >
           Send Direct Message
         </Text>
         <Spacer />
-        <form className={styles.formContainer}>
+        <form className={styles.formContainer} onSubmit={handleSubmit(submit)}>
           <div className={styles.formFlexContainer}>
-            <Input htmlType="text" placeholder="Your Name" width="100%" />
+            <div className={styles.inputContainer}>
+              <Input
+                htmlType="text"
+                placeholder="Your Name"
+                width="100%"
+                {...register("name", { required: true })}
+              />
+              <Text
+                font="12px"
+                type="error"
+                className={styles.error}
+                style={{ opacity: errors.name ? 1 : 0 }}
+              >
+                * Please enter your name
+              </Text>
+            </div>
             <Spacer w={2} />
-            <Input htmlType="email" placeholder="Your Email" width="100%" />
+            <div className={styles.inputContainer}>
+              <Input
+                htmlType="email"
+                placeholder="Your Email"
+                width="100%"
+                {...register("email", { required: true })}
+              />
+              <Text
+                font="12px"
+                type="error"
+                className={styles.error}
+                style={{ opacity: errors.email ? 1 : 0 }}
+              >
+                * Please enter your email
+              </Text>
+            </div>
           </div>
           <Spacer h={2} />
-          <Textarea placeholder="Your message" width="100%" height={8} />
+          <div className={styles.inputContainer}>
+            <Textarea
+              placeholder="Your message"
+              width="100%"
+              height={8}
+              {...register("message", { required: true })}
+            />
+            <Text
+              font="12px"
+              type="error"
+              className={`${styles.error} ${styles.messageError}`}
+              style={{ opacity: errors.message ? 1 : 0 }}
+            >
+              * Please enter a message
+            </Text>
+          </div>
           <Spacer h={2} />
-          <Button auto htmlType="submit" type="secondary" iconRight={<Send />}>
+          <Button
+            auto
+            htmlType="submit"
+            type="secondary"
+            iconRight={<Send />}
+            loading={isLoading}
+            disabled={isLoading}
+          >
             Send Message
           </Button>
         </form>

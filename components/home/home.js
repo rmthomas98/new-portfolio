@@ -3,12 +3,14 @@ import { Text, Button, Tooltip, Spacer } from "@geist-ui/core";
 import { File, Github, Twitter } from "@geist-ui/icons";
 import { ThemeContext } from "../themeContext";
 import { useContext } from "react";
+import Scroll from "react-scroll";
 
 export const Home = () => {
   const { theme } = useContext(ThemeContext);
+  const scroller = Scroll.scroller;
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="home">
       <div className={styles.container}>
         <div className={styles.contentContainer}>
           <Text
@@ -40,11 +42,24 @@ export const Home = () => {
             exceptional web apps along with many other things.
           </Text>
           <div className={styles.buttonContainer}>
-            <Button style={{ minWidth: 150 }} type="secondary">
+            <Button
+              style={{ minWidth: 150 }}
+              type="secondary"
+              onClick={() =>
+                scroller.scrollTo("work", { smooth: true, offset: -50 })
+              }
+            >
               View Work
             </Button>
             <Spacer />
-            <Button style={{ minWidth: 150 }}>Get in touch</Button>
+            <Button
+              style={{ minWidth: 150 }}
+              onClick={() =>
+                scroller.scrollTo("contact", { smooth: true, offset: -50 })
+              }
+            >
+              Get in touch
+            </Button>
           </div>
         </div>
       </div>

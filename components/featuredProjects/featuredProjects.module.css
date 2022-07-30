@@ -109,4 +109,10 @@
   .lastProjectContainer {
     margin-bottom: 200px;
   }
+  .infoContainer {
+    margin-top: 25px;
+  }
+  .description {
+    max-width: 65%;
+  }
 }

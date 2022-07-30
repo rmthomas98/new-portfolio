@@ -1,27 +1,86 @@
 import styles from "./mobileNav.module.css";
-import { Button, Drawer, Text } from "@geist-ui/core";
-import { Home } from "@geist-ui/icons";
-import { ThemeContext } from "@geist-ui/core/esm/use-theme/theme-context";
+import { Drawer, Text, Toggle } from "@geist-ui/core";
+import { ThemeContext } from "../themeContext";
 import { useContext } from "react";
+import Scroll from "react-scroll";
 
-export const MobileNav = ({ navIsActive, setNavIsActive }) => {
+export const MobileNav = ({
+  navIsActive,
+  setNavIsActive,
+  handleThemeChange,
+}) => {
   const { theme } = useContext(ThemeContext);
+  const scroller = Scroll.scroller;
+
+  const handleScrollTo = (value) => {
+    scroller.scrollTo(value, { smooth: true, offset: -50 });
+    setNavIsActive(false);
+  };
 
   return (
     <Drawer visible={navIsActive} onClose={() => setNavIsActive(false)}>
       <Drawer.Title>Ryan Thomas</Drawer.Title>
       <Drawer.Subtitle>Site Navigation</Drawer.Subtitle>
+      <div className={styles.toggleContainer}>
+        <Toggle onChange={handleThemeChange} checked={theme === "dark"} />
+      </div>
       <Drawer.Content>
         <div className={styles.drawerContainer}>
-          <div
-            className={styles.linkContainer}
-            style={{ color: theme === "dark" ? "gray" : "GrayText" }}
+          <Text
+            h5
+            className={styles.navLink}
+            style={{
+              color: theme === "dark" ? "gray" : "GrayText",
+              fontWeight: 400,
+            }}
+            onClick={() => handleScrollTo("home")}
           >
-            <Home size={18} />
-            <Text h5 margin={0} ml={0.6}>
-              Home
-            </Text>
-          </div>
+            Home
+          </Text>
+          <Text
+            h5
+            className={styles.navLink}
+            style={{
+              color: theme === "dark" ? "gray" : "GrayText",
+              fontWeight: 400,
+            }}
+            onClick={() => handleScrollTo("about")}
+          >
+            About me
+          </Text>
+          <Text
+            h5
+            className={styles.navLink}
+            style={{
+              color: theme === "dark" ? "gray" : "GrayText",
+              fontWeight: 400,
+            }}
+            onClick={() => handleScrollTo("work")}
+          >
+            My Work
+          </Text>
+          <Text
+            h5
+            className={styles.navLink}
+            style={{
+              color: theme === "dark" ? "gray" : "GrayText",
+              fontWeight: 400,
+            }}
+            onClick={() => handleScrollTo("skills")}
+          >
+            Skills
+          </Text>
+          <Text
+            h5
+            className={styles.navLink}
+            style={{
+              color: theme === "dark" ? "gray" : "GrayText",
+              fontWeight: 400,
+            }}
+            onClick={() => handleScrollTo("contact")}
+          >
+            Contact
+          </Text>
         </div>
       </Drawer.Content>
     </Drawer>

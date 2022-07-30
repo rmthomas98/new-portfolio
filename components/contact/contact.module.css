@@ -53,8 +53,25 @@
   width: 100%;
 }
 
+.inputContainer {
+  width: 100%;
+  position: relative;
+}
+
 .formFlexContainer {
   display: flex;
+}
+
+.error {
+  position: absolute;
+  left: 4px;
+  top: 26px;
+  pointer-events: none;
+  transition: 300ms;
+}
+
+.messageError {
+  top: 118px;
 }
 
 @media screen and (max-width: 520px) {

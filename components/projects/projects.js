@@ -1,6 +1,6 @@
 import styles from "./projects.module.css";
-import { Text, Spacer, Card, Button, Badge } from "@geist-ui/core";
-import { useContext } from "react";
+import { Text, Spacer, Card, Button, Badge, Tooltip } from "@geist-ui/core";
+import React, { useContext } from "react";
 import { ThemeContext } from "../themeContext";
 import { data } from "../../data/projects";
 import { ExternalLink, Folder, Github } from "@geist-ui/icons";
@@ -36,8 +36,12 @@ export const Projects = () => {
           <div className={styles.flexContainer}>
             {data.slice(0, 3).map((project, index) => {
               return (
-                <>
-                  <Card key={index} className={styles.cardContainer} shadow>
+                <React.Fragment key={index}>
+                  <Card
+                    className={styles.cardContainer}
+                    shadow={theme === "dark" ? false : true}
+                    hoverable
+                  >
                     <Card.Content>
                       <Text
                         className={styles.code}
@@ -75,27 +79,62 @@ export const Projects = () => {
                         })}
                       </div>
                       <div className={styles.buttonContainer}>
-                        <Button auto icon={<Github />} scale={1 / 2} px={0.6} />
+                        <Tooltip
+                          text={"Github"}
+                          placement="bottom"
+                          color="invert"
+                          py={0.6}
+                        >
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Button
+                              auto
+                              icon={<Github />}
+                              scale={1 / 2}
+                              px={0.6}
+                            />
+                          </a>
+                        </Tooltip>
                         <Spacer w={0.6} />
-                        <Button
-                          auto
-                          icon={<ExternalLink />}
-                          scale={1 / 2}
-                          px={0.6}
-                        />
+                        <Tooltip
+                          text={"Live"}
+                          placement="bottom"
+                          color="invert"
+                          py={0.6}
+                        >
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Button
+                              auto
+                              icon={<ExternalLink />}
+                              scale={1 / 2}
+                              px={0.6}
+                            />
+                          </a>
+                        </Tooltip>
                       </div>
                     </Card.Content>
                   </Card>
                   {index !== 2 && <Spacer w={3} />}
-                </>
+                </React.Fragment>
               );
             })}
           </div>
           <div className={`${styles.flexContainer} ${styles.flexTwo}`}>
             {data.slice(3).map((project, index) => {
               return (
-                <>
-                  <Card key={index} className={styles.cardContainer} shadow>
+                <React.Fragment key={index}>
+                  <Card
+                    className={styles.cardContainer}
+                    shadow={theme === "dark" ? false : true}
+                    hoverable
+                  >
                     <Card.Content>
                       <Text
                         className={styles.code}
@@ -133,19 +172,50 @@ export const Projects = () => {
                         })}
                       </div>
                       <div className={styles.buttonContainer}>
-                        <Button auto icon={<Github />} scale={1 / 2} px={0.6} />
+                        <Tooltip
+                          text={"Github"}
+                          placement="bottom"
+                          color="invert"
+                          py={0.6}
+                        >
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Button
+                              auto
+                              icon={<Github />}
+                              scale={1 / 2}
+                              px={0.6}
+                            />
+                          </a>
+                        </Tooltip>
                         <Spacer w={0.6} />
-                        <Button
-                          auto
-                          icon={<ExternalLink />}
-                          scale={1 / 2}
-                          px={0.6}
-                        />
+                        <Tooltip
+                          text={"Live"}
+                          placement="bottom"
+                          color="invert"
+                          py={0.6}
+                        >
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Button
+                              auto
+                              icon={<ExternalLink />}
+                              scale={1 / 2}
+                              px={0.6}
+                            />
+                          </a>
+                        </Tooltip>
                       </div>
                     </Card.Content>
                   </Card>
                   {index !== 2 && <Spacer w={3} />}
-                </>
+                </React.Fragment>
               );
             })}
           </div>

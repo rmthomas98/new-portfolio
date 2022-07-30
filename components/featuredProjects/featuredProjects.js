@@ -17,7 +17,7 @@ export const FeaturedProjects = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="work">
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <Text
@@ -56,7 +56,8 @@ export const FeaturedProjects = () => {
           </div>
           <div className={styles.infoContainer}>
             <Card
-              shadow
+              shadow={theme === "dark" ? false : true}
+              hoverable
               className={`${styles.descriptionOne} ${styles.description}`}
             >
               <Card.Content>
@@ -85,23 +86,35 @@ export const FeaturedProjects = () => {
                 <Divider mt={1.4} mb={1.2} />
                 <div className={styles.buttonContainer}>
                   <Tooltip text={"Github"} placement="bottomEnd" py={0.6}>
-                    <Button
-                      scale={2 / 3}
-                      iconRight={<Github />}
-                      auto
-                      px={0.6}
-                      margin={0}
-                    />
+                    <a
+                      href="https://github.com/rmthomas98/assistantai"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button
+                        scale={2 / 3}
+                        iconRight={<Github />}
+                        auto
+                        px={0.6}
+                        margin={0}
+                      />
+                    </a>
                   </Tooltip>
                   <Spacer w={0.6} />
                   <Tooltip text={"Live"} placement="bottomEnd" py={0.6}>
-                    <Button
-                      scale={2 / 3}
-                      iconRight={<ExternalLink />}
-                      auto
-                      px={0.6}
-                      margin={0}
-                    />
+                    <a
+                      href="https://assistantai.io"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button
+                        scale={2 / 3}
+                        iconRight={<ExternalLink />}
+                        auto
+                        px={0.6}
+                        margin={0}
+                      />
+                    </a>
                   </Tooltip>
                 </div>
               </Card.Content>
@@ -111,7 +124,8 @@ export const FeaturedProjects = () => {
         <div className={styles.projectContainer}>
           <div className={styles.infoContainer}>
             <Card
-              shadow
+              shadow={theme === "dark" ? false : true}
+              hoverable
               className={`${styles.description} ${styles.descriptionTwo}`}
             >
               <Card.Content>
@@ -139,23 +153,35 @@ export const FeaturedProjects = () => {
                 <Divider mt={1.4} mb={1.2} />
                 <div className={styles.buttonContainerTwo}>
                   <Tooltip text={"Github"} placement="bottomStart" py={0.6}>
-                    <Button
-                      scale={2 / 3}
-                      iconRight={<Github />}
-                      auto
-                      px={0.6}
-                      margin={0}
-                    />
+                    <a
+                      href="https://github.com/rmthomas98/aoneadmin"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button
+                        scale={2 / 3}
+                        iconRight={<Github />}
+                        auto
+                        px={0.6}
+                        margin={0}
+                      />
+                    </a>
                   </Tooltip>
                   <Spacer w={0.6} />
                   <Tooltip text={"Live"} placement="bottomStart" py={0.6}>
-                    <Button
-                      scale={2 / 3}
-                      iconRight={<ExternalLink />}
-                      auto
-                      px={0.6}
-                      margin={0}
-                    />
+                    <a
+                      href="https://aoneadmin.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button
+                        scale={2 / 3}
+                        iconRight={<ExternalLink />}
+                        auto
+                        px={0.6}
+                        margin={0}
+                      />
+                    </a>
                   </Tooltip>
                 </div>
               </Card.Content>
@@ -187,7 +213,8 @@ export const FeaturedProjects = () => {
           </div>
           <div className={styles.infoContainer}>
             <Card
-              shadow
+              shadow={theme === "dark" ? false : true}
+              hoverable
               className={`${styles.descriptionOne} ${styles.description}`}
             >
               <Card.Content>
@@ -216,23 +243,35 @@ export const FeaturedProjects = () => {
                 <Divider mt={1.4} mb={1.2} />
                 <div className={styles.buttonContainer}>
                   <Tooltip text={"Github"} placement="bottomEnd" py={0.6}>
-                    <Button
-                      scale={2 / 3}
-                      iconRight={<Github />}
-                      auto
-                      px={0.6}
-                      margin={0}
-                    />
+                    <a
+                      href="https://github.com/rmthomas98/skyyon"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button
+                        scale={2 / 3}
+                        iconRight={<Github />}
+                        auto
+                        px={0.6}
+                        margin={0}
+                      />
+                    </a>
                   </Tooltip>
                   <Spacer w={0.6} />
                   <Tooltip text={"Live"} placement="bottomEnd" py={0.6}>
-                    <Button
-                      scale={2 / 3}
-                      iconRight={<ExternalLink />}
-                      auto
-                      px={0.6}
-                      margin={0}
-                    />
+                    <a
+                      href="https://skyyon.herokuapp.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Button
+                        scale={2 / 3}
+                        iconRight={<ExternalLink />}
+                        auto
+                        px={0.6}
+                        margin={0}
+                      />
+                    </a>
                   </Tooltip>
                 </div>
               </Card.Content>

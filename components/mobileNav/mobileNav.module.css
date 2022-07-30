@@ -2,13 +2,18 @@
   width: 200px;
 }
 
-.linkContainer {
-  display: flex;
-  align-items: center;
+.navLink {
+  width: 100%;
   cursor: pointer;
   transition: 200ms;
 }
 
-.linkContainer:hover {
-  color: red !important;
+.navLink:hover {
+  color: #0070f3 !important;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
 }

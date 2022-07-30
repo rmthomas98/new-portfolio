@@ -28,11 +28,29 @@ export const Footer = () => {
           &copy; Ryan 2022
         </Text> */}
         <div className={styles.buttonContainer}>
-          <Button icon={<Github />} auto scale={1 / 2} px={0.6} />
+          <a
+            href="https://github.com/rmthomas98"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button icon={<Github />} auto scale={1 / 2} px={0.6} />
+          </a>
           <Spacer w={0.4} />
-          <Button icon={<Linkedin />} auto scale={1 / 2} px={0.6} />
+          <a
+            href="https://www.linkedin.com/in/ryan-thomas-4b3b961a5/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button icon={<Linkedin />} auto scale={1 / 2} px={0.6} />
+          </a>
           <Spacer w={0.4} />
-          <Button icon={<Twitter />} auto scale={1 / 2} px={0.6} />
+          <a
+            href="https://twitter.com/codethematrix"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button icon={<Twitter />} auto scale={1 / 2} px={0.6} />
+          </a>
         </div>
       </div>
     </div>

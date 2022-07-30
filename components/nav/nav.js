@@ -5,12 +5,13 @@ import { useEffect, useState } from "react";
 import { useScrollDirection } from "use-scroll-direction";
 import { useWindowWidth } from "@react-hook/window-size";
 import { MobileNav } from "../mobileNav/mobileNav";
+import Scroll from "react-scroll";
 
 export const Nav = ({ theme, setTheme }) => {
   const { scrollDirection } = useScrollDirection();
   const [isActive, setIsActive] = useState(true);
   const [navIsActive, setNavIsActive] = useState(false);
-  const width = useWindowWidth();
+  const scroller = Scroll.scroller;
 
   useEffect(() => {
     if (scrollDirection === "UP") {
@@ -44,7 +45,12 @@ export const Nav = ({ theme, setTheme }) => {
         }}
       >
         <div className={styles.container}>
-          <Text h4 margin={0}>
+          <Text
+            h4
+            margin={0}
+            style={{ cursor: "pointer" }}
+            onClick={() => scroller.scrollTo("home", { smooth: true })}
+          >
             Ryan Thomas
           </Text>
           <div className={styles.centerContainer}>
@@ -53,16 +59,22 @@ export const Nav = ({ theme, setTheme }) => {
               hideDivider
               hideBorder
               style={{ minWidth: 290, overflowY: "hidden" }}
+              onChange={(value) => {
+                scroller.scrollTo(value, { smooth: true, offset: -50 });
+              }}
             >
               {/* <Tabs.Item label="Home" value="home"></Tabs.Item> */}
               <Tabs.Item
                 label="Work"
                 value="work"
-                style={{ color: "#fff" }}
                 className={styles.tabs}
               ></Tabs.Item>
               <Tabs.Item label="Skills" value="skills"></Tabs.Item>
-              <Tabs.Item label="About" value="about"></Tabs.Item>
+              <Tabs.Item
+                label="About"
+                value="about"
+                onClick={() => console.log("hello")}
+              ></Tabs.Item>
               <Tabs.Item label="Contact" value="contact"></Tabs.Item>
             </Tabs>
           </div>
@@ -72,7 +84,6 @@ export const Nav = ({ theme, setTheme }) => {
                 mr={1}
                 className={styles.switch}
                 checked={theme === "dark"}
-                scale={0.8}
                 onChange={handleThemeChange}
               />
             </div>
@@ -106,7 +117,7 @@ export const Nav = ({ theme, setTheme }) => {
               </a>
             </Tooltip>
             <div className={styles.spacerContainer}>
-              <Spacer w={0.4} />
+              <Spacer w={0.6} />
             </div>
             <Menu
               className={styles.menu}
@@ -115,7 +126,11 @@ export const Nav = ({ theme, setTheme }) => {
           </div>
         </div>
       </div>
-      <MobileNav navIsActive={navIsActive} setNavIsActive={setNavIsActive} />
+      <MobileNav
+        navIsActive={navIsActive}
+        setNavIsActive={setNavIsActive}
+        handleThemeChange={handleThemeChange}
+      />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import styles from "./tech.module.css";
 import { Text, Spacer, Card } from "@geist-ui/core";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../themeContext";
 import { tech } from "../../data/tech";
 
@@ -8,7 +8,7 @@ export const Tech = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="skills">
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <Text
@@ -36,8 +36,13 @@ export const Tech = () => {
             <div className={styles.flexContainer}>
               {tech.slice(0, 4).map((tech, index) => {
                 return (
-                  <>
-                    <Card key={index} style={{ width: "100%" }} shadow py={0.4}>
+                  <React.Fragment key={index}>
+                    <Card
+                      style={{ width: "100%" }}
+                      shadow={theme === "dark" ? false : true}
+                      hoverable
+                      py={0.4}
+                    >
                       <Card.Content className={styles.cardContentContainer}>
                         {tech.icon}
                         <Text
@@ -51,7 +56,7 @@ export const Tech = () => {
                       </Card.Content>
                     </Card>
                     {index !== 3 && <Spacer w={3} />}
-                  </>
+                  </React.Fragment>
                 );
               })}
             </div>
@@ -60,8 +65,13 @@ export const Tech = () => {
             >
               {tech.slice(4, 8).map((tech, index) => {
                 return (
-                  <>
-                    <Card key={index} style={{ width: "100%" }} shadow py={0.4}>
+                  <React.Fragment key={index}>
+                    <Card
+                      style={{ width: "100%" }}
+                      shadow={theme === "dark" ? false : true}
+                      hoverable
+                      py={0.4}
+                    >
                       <Card.Content className={styles.cardContentContainer}>
                         {tech.icon}
                         <Text
@@ -75,7 +85,7 @@ export const Tech = () => {
                       </Card.Content>
                     </Card>
                     {index !== 3 && <Spacer w={3} />}
-                  </>
+                  </React.Fragment>
                 );
               })}
             </div>
@@ -86,8 +96,13 @@ export const Tech = () => {
             >
               {tech.slice(8, 12).map((tech, index) => {
                 return (
-                  <>
-                    <Card key={index} style={{ width: "100%" }} shadow py={0.4}>
+                  <React.Fragment key={index}>
+                    <Card
+                      style={{ width: "100%" }}
+                      shadow={theme === "dark" ? false : true}
+                      hoverable
+                      py={0.4}
+                    >
                       <Card.Content className={styles.cardContentContainer}>
                         {tech.icon}
                         <Text
@@ -101,7 +116,7 @@ export const Tech = () => {
                       </Card.Content>
                     </Card>
                     {index !== 3 && <Spacer w={3} />}
-                  </>
+                  </React.Fragment>
                 );
               })}
             </div>
@@ -110,8 +125,13 @@ export const Tech = () => {
             >
               {tech.slice(12, 16).map((tech, index) => {
                 return (
-                  <>
-                    <Card key={index} style={{ width: "100%" }} shadow py={0.4}>
+                  <React.Fragment key={index}>
+                    <Card
+                      style={{ width: "100%" }}
+                      py={0.4}
+                      shadow={theme === "dark" ? false : true}
+                      hoverable
+                    >
                       <Card.Content className={styles.cardContentContainer}>
                         {tech.icon}
                         <Text
@@ -125,7 +145,7 @@ export const Tech = () => {
                       </Card.Content>
                     </Card>
                     {index !== 3 && <Spacer w={3} />}
-                  </>
+                  </React.Fragment>
                 );
               })}
             </div>

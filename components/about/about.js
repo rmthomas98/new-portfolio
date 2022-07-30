@@ -10,7 +10,7 @@ export const About = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="about">
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <Text

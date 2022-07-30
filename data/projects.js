@@ -32,7 +32,7 @@ export const data = [
     description:
       "I made this website for a client who wanted a website for their business.",
     stack: ["Next.js", "CSS"],
-    link: "https://platinumpowerwashing.io",
+    link: "https://platinumpowerwash.io",
     github: "https://github.com/rmthomas98/powerwashing",
   },
   {
@@ -41,7 +41,7 @@ export const data = [
     description:
       "This was an existing website that I redid and made imporovements on.",
     stack: ["React", "JavaScript", "CSS"],
-    link: "https://tradeclub.vercel.net",
+    link: "https://tradeclub.vercel.app",
     github: "https://github.com/rmthomas98/tradeclub",
   },
   {
