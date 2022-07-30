@@ -60,7 +60,7 @@ export const Home = () => {
                 style={{ minWidth: 150 }}
                 type="secondary"
                 onClick={() =>
-                  scroller.scrollTo(width > 500 ? "work" : "my-work", {
+                  scroller.scrollTo(width > 500 ? "work" : "mobile-work", {
                     smooth: true,
                     offset: -50,
                   })
