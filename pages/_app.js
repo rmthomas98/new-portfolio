@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Nav } from "../components/nav/nav";
 import "../styles/globals.css";
 import { ThemeContext } from "../components/themeContext";
-import Head from "next/header";
+import Head from "next/head";
 import Script from "next/script";
 
 const MyApp = ({ Component, pageProps }) => {
