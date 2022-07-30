@@ -5,10 +5,12 @@ import { ThemeContext } from "../themeContext";
 import { useContext } from "react";
 import Scroll from "react-scroll";
 import { Fade, Bounce } from "react-reveal";
+import { useWindowWidth } from "@react-hook/window-size";
 
 export const Home = () => {
   const { theme } = useContext(ThemeContext);
   const scroller = Scroll.scroller;
+  const width = useWindowWidth(60);
 
   return (
     <div className={styles.wrapper} id="home">
@@ -58,7 +60,10 @@ export const Home = () => {
                 style={{ minWidth: 150 }}
                 type="secondary"
                 onClick={() =>
-                  scroller.scrollTo("work", { smooth: true, offset: -50 })
+                  scroller.scrollTo(width > 500 ? "work" : "my-work", {
+                    smooth: true,
+                    offset: -50,
+                  })
                 }
               >
                 View Work
