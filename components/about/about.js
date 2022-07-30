@@ -52,7 +52,7 @@ export const About = () => {
               small
               style={{ color: theme === "dark" ? "gray" : "GrayText" }}
             >
-              Technology I've recently been working with:
+              Technology I&#39;ve recently been working with:
             </Text>
             <Spacer />
             <div className={styles.techContainer}>
