@@ -52,7 +52,7 @@ export const Home = () => {
               exceptional web apps along with many other things.
             </Text>
           </Fade>
-          <Bounce ssrReveal delay={600} right>
+          <Fade ssrReveal delay={400} up>
             <div className={styles.buttonContainer}>
               <Button
                 style={{ minWidth: 150 }}
@@ -73,7 +73,7 @@ export const Home = () => {
                 Get in touch
               </Button>
             </div>
-          </Bounce>
+          </Fade>
         </div>
       </div>
     </div>

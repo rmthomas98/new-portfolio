@@ -64,7 +64,7 @@ export const About = () => {
               {recentTech.slice(0, 3).map((tech, index) => {
                 return (
                   <div key={index} style={{ width: "100%" }}>
-                    <Flip left delay={1200} ssrReveal>
+                    <Flip left delay={800} ssrReveal>
                       <div className={styles.tech}>
                         <ChevronsRight size={14} color="#0070F3" />
                         <Text
@@ -89,7 +89,7 @@ export const About = () => {
               {recentTech.slice(3).map((tech, index) => {
                 return (
                   <div key={index} style={{ width: "100%" }}>
-                    <Flip left delay={1200} ssrReveal>
+                    <Flip left delay={800} ssrReveal>
                       <div className={styles.tech}>
                         <ChevronsRight size={14} color="#0070F3" />
                         <Text
@@ -119,7 +119,7 @@ export const About = () => {
                 style={{ background: theme === "dark" ? "#000" : "#fff" }}
               ></span>
             </span>
-            <Flip ssrReveal>
+            <Flip ssrReveal left>
               <Image
                 src="/images/headshot.jpg"
                 height={300}

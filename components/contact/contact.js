@@ -192,7 +192,7 @@ export const Contact = () => {
             </Fade>
           </div>
           <Spacer h={2} />
-          <Bounce ssrReveal right delay={400}>
+          <Fade ssrReveal up>
             <Button
               auto
               htmlType="submit"
@@ -203,7 +203,7 @@ export const Contact = () => {
             >
               Send Message
             </Button>
-          </Bounce>
+          </Fade>
         </form>
       </div>
     </div>
