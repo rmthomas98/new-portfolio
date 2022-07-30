@@ -21,7 +21,7 @@ export const Nav = ({ theme, setTheme }) => {
     } else if (scrollDirection === "DOWN" && scrollPos > 60) {
       setIsActive(false);
     }
-  }, [scrollDirection]);
+  }, [scrollDirection, scrollPos]);
 
   const handleThemeChange = () => {
     if (theme === "light") {
