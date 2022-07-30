@@ -115,6 +115,7 @@ export const About = () => {
               height={300}
               width={275}
               className={styles.image}
+              alt="headshot"
             />
           </div>
           {/* </div> */}
