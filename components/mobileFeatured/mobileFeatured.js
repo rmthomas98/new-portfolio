@@ -58,9 +58,7 @@ export const MobileFeatured = () => {
                     style={{ color: theme === "dark" ? "gray" : "GrayText" }}
                     mt={0}
                   >
-                    I was contracted out to build the backend for this website.
-                    Signup, login, email verification, and password reset were
-                    integrated.
+                    {project.description}
                   </Text>
                   <div className={styles.badgeContainer}>
                     {project.tech.map((tech, index) => {
