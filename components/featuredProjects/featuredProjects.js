@@ -12,6 +12,8 @@ import {
 } from "@geist-ui/core";
 import Image from "next/image";
 import { Github, ExternalLink } from "@geist-ui/icons";
+import { featured } from "../../data/featured";
+import React from "react";
 
 export const FeaturedProjects = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -79,9 +81,16 @@ export const FeaturedProjects = () => {
                   and threads.
                 </Text>
                 <div className={styles.badgeContainer}>
-                  <Badge scale={2 / 3}>Next.js</Badge>
-                  <Spacer w={0.3} />
-                  <Badge scale={2 / 3}>PostgreSQL</Badge>
+                  {featured[0].tech.map((tech, index) => {
+                    return (
+                      <React.Fragment key={index}>
+                        <Badge scale={1 / 2} mb={0.4}>
+                          {tech}
+                        </Badge>
+                        <Spacer w={0.3} />
+                      </React.Fragment>
+                    );
+                  })}
                 </div>
                 <Divider mt={1.4} mb={1.2} />
                 <div className={styles.buttonContainer}>

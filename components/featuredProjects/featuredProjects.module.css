@@ -88,6 +88,7 @@
 .badgeContainer {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .badgeContainerTwo {
@@ -106,17 +107,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .lastProjectContainer {
-    margin-bottom: 200px;
-  }
-  .infoContainer {
-    margin-top: 25px;
-  }
-  .description {
-    max-width: 65%;
-  }
-
-  .imageContainer {
-    width: 100%;
+  .wrapper {
+    display: none;
   }
 }

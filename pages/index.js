@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Home } from "../components/home/home";
 import { About } from "../components/about/about";
 import { FeaturedProjects } from "../components/featuredProjects/featuredProjects";
+import { MobileFeatured } from "../components/mobileFeatured/mobileFeatured";
 import { Projects } from "../components/projects/projects";
 import { Tech } from "../components/tech/tech";
 import { Contact } from "../components/contact/contact";
@@ -16,6 +17,7 @@ const Main = () => {
       <Home />
       <About />
       <FeaturedProjects />
+      <MobileFeatured />
       <Projects />
       <Tech />
       <Contact />
