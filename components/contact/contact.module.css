@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .wrapper {
   padding: 16px 30px;
   padding-bottom: 100px;
@@ -9,12 +16,18 @@
 }
 
 .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 500px;
 }
 
 .header {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 
@@ -35,12 +48,25 @@
 }
 
 .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
+.cardWrapper {
+  width: 100%;
+}
+
 .cardContentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -59,6 +85,8 @@
 }
 
 .formFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -67,6 +95,8 @@
   left: 4px;
   top: 26px;
   pointer-events: none;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
   transition: 300ms;
 }
 
@@ -76,12 +106,18 @@
 
 @media screen and (max-width: 600px) {
   .formFlexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 520px) {
   .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }

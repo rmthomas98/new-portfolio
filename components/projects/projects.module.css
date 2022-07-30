@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .wrapper {
   padding: 16px 30px;
   padding-bottom: 100px;
@@ -9,12 +16,18 @@
 }
 
 .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 500px;
 }
 
 .header {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 
@@ -35,11 +48,17 @@
 }
 
 .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flexTwo {
   margin-top: 16px;
+}
+
+.cardWrapper {
+  width: 100%;
 }
 
 .cardContainer {
@@ -49,7 +68,11 @@
 }
 
 .nameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -64,6 +87,8 @@
 }
 
 .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: 20px;
@@ -71,9 +96,14 @@
 
 @media screen and (max-width: 700px) {
   .projectContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-right: 16px;
     width: 100%;

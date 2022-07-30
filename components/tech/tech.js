@@ -3,6 +3,7 @@ import { Text, Spacer, Card } from "@geist-ui/core";
 import React, { useContext } from "react";
 import { ThemeContext } from "../themeContext";
 import { tech } from "../../data/tech";
+import { Fade } from "react-reveal";
 
 export const Tech = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -37,24 +38,28 @@ export const Tech = () => {
               {tech.slice(0, 4).map((tech, index) => {
                 return (
                   <React.Fragment key={index}>
-                    <Card
-                      style={{ width: "100%" }}
-                      shadow={theme === "dark" ? false : true}
-                      hoverable
-                      py={0.4}
-                    >
-                      <Card.Content className={styles.cardContentContainer}>
-                        {tech.icon}
-                        <Text
-                          className={styles.name}
-                          style={{
-                            color: theme === "dark" ? "gray" : "GrayText",
-                          }}
+                    <div className={styles.cardWrapper}>
+                      <Fade up ssrReveal>
+                        <Card
+                          style={{ width: "100%" }}
+                          shadow={theme === "dark" ? false : true}
+                          hoverable
+                          py={0.4}
                         >
-                          {tech.name}
-                        </Text>
-                      </Card.Content>
-                    </Card>
+                          <Card.Content className={styles.cardContentContainer}>
+                            {tech.icon}
+                            <Text
+                              className={styles.name}
+                              style={{
+                                color: theme === "dark" ? "gray" : "GrayText",
+                              }}
+                            >
+                              {tech.name}
+                            </Text>
+                          </Card.Content>
+                        </Card>
+                      </Fade>
+                    </div>
                     {index !== 3 && <Spacer w={3} />}
                   </React.Fragment>
                 );
@@ -66,24 +71,28 @@ export const Tech = () => {
               {tech.slice(4, 8).map((tech, index) => {
                 return (
                   <React.Fragment key={index}>
-                    <Card
-                      style={{ width: "100%" }}
-                      shadow={theme === "dark" ? false : true}
-                      hoverable
-                      py={0.4}
-                    >
-                      <Card.Content className={styles.cardContentContainer}>
-                        {tech.icon}
-                        <Text
-                          className={styles.name}
-                          style={{
-                            color: theme === "dark" ? "gray" : "GrayText",
-                          }}
+                    <div className={styles.cardWrapper}>
+                      <Fade up ssrReveal>
+                        <Card
+                          style={{ width: "100%" }}
+                          shadow={theme === "dark" ? false : true}
+                          hoverable
+                          py={0.4}
                         >
-                          {tech.name}
-                        </Text>
-                      </Card.Content>
-                    </Card>
+                          <Card.Content className={styles.cardContentContainer}>
+                            {tech.icon}
+                            <Text
+                              className={styles.name}
+                              style={{
+                                color: theme === "dark" ? "gray" : "GrayText",
+                              }}
+                            >
+                              {tech.name}
+                            </Text>
+                          </Card.Content>
+                        </Card>
+                      </Fade>
+                    </div>
                     {index !== 3 && <Spacer w={3} />}
                   </React.Fragment>
                 );
@@ -97,24 +106,28 @@ export const Tech = () => {
               {tech.slice(8, 12).map((tech, index) => {
                 return (
                   <React.Fragment key={index}>
-                    <Card
-                      style={{ width: "100%" }}
-                      shadow={theme === "dark" ? false : true}
-                      hoverable
-                      py={0.4}
-                    >
-                      <Card.Content className={styles.cardContentContainer}>
-                        {tech.icon}
-                        <Text
-                          className={styles.name}
-                          style={{
-                            color: theme === "dark" ? "gray" : "GrayText",
-                          }}
+                    <div className={styles.cardWrapper}>
+                      <Fade up ssrReveal>
+                        <Card
+                          style={{ width: "100%" }}
+                          shadow={theme === "dark" ? false : true}
+                          hoverable
+                          py={0.4}
                         >
-                          {tech.name}
-                        </Text>
-                      </Card.Content>
-                    </Card>
+                          <Card.Content className={styles.cardContentContainer}>
+                            {tech.icon}
+                            <Text
+                              className={styles.name}
+                              style={{
+                                color: theme === "dark" ? "gray" : "GrayText",
+                              }}
+                            >
+                              {tech.name}
+                            </Text>
+                          </Card.Content>
+                        </Card>
+                      </Fade>
+                    </div>
                     {index !== 3 && <Spacer w={3} />}
                   </React.Fragment>
                 );
@@ -126,24 +139,28 @@ export const Tech = () => {
               {tech.slice(12, 16).map((tech, index) => {
                 return (
                   <React.Fragment key={index}>
-                    <Card
-                      style={{ width: "100%" }}
-                      py={0.4}
-                      shadow={theme === "dark" ? false : true}
-                      hoverable
-                    >
-                      <Card.Content className={styles.cardContentContainer}>
-                        {tech.icon}
-                        <Text
-                          className={styles.name}
-                          style={{
-                            color: theme === "dark" ? "gray" : "GrayText",
-                          }}
+                    <div className={styles.cardWrapper}>
+                      <Fade up ssrReveal>
+                        <Card
+                          style={{ width: "100%" }}
+                          py={0.4}
+                          shadow={theme === "dark" ? false : true}
+                          hoverable
                         >
-                          {tech.name}
-                        </Text>
-                      </Card.Content>
-                    </Card>
+                          <Card.Content className={styles.cardContentContainer}>
+                            {tech.icon}
+                            <Text
+                              className={styles.name}
+                              style={{
+                                color: theme === "dark" ? "gray" : "GrayText",
+                              }}
+                            >
+                              {tech.name}
+                            </Text>
+                          </Card.Content>
+                        </Card>
+                      </Fade>
+                    </div>
                     {index !== 3 && <Spacer w={3} />}
                   </React.Fragment>
                 );

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .wrapper {
   padding: 16px 30px;
 }
@@ -8,12 +15,18 @@
 }
 
 .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 500px;
 }
 
 .header {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 
@@ -34,7 +47,11 @@
 }
 
 .projectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
   margin-bottom: 200px;
@@ -45,10 +62,15 @@
 }
 
 .imageContainer {
-  box-shadow: 0 5px 14px rgb(0 0 0 / 20%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 6px;
+  -webkit-box-shadow: 0 5px 14px rgb(0 0 0 / 20%);
+  box-shadow: 0 5px 14px rgb(0 0 0 / 20%);
 }
 
 .image {
@@ -86,23 +108,40 @@
 }
 
 .badgeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .badgeContainerTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .buttonContainerTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 

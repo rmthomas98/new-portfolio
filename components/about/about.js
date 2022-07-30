@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../themeContext";
 import { ChevronsRight } from "@geist-ui/icons";
 import { recentTech } from "../../data/recentTech";
+import { Fade, Bounce, Flip } from "react-reveal";
 
 export const About = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -35,44 +36,50 @@ export const About = () => {
         <Spacer h={3} />
         <div className={styles.flexContainer}>
           <div className={styles.infoContainer}>
-            <Text
-              p
-              style={{ color: theme === "dark" ? "gray" : "GrayText" }}
-              className={styles.description}
-              margin={0}
-              small
-            >
-              Hello! I&#39;m Ryan, a software developer based out of Dayton,
-              Ohio. I really enjoy creating beautiful applications for the web.
-              My goal is to build scalable, performant, and user friendly
-              applications.
-            </Text>
+            <Fade left ssrReveal>
+              <Text
+                p
+                style={{ color: theme === "dark" ? "gray" : "GrayText" }}
+                className={styles.description}
+                margin={0}
+                small
+              >
+                Hello! I&#39;m Ryan, a software developer based out of Dayton,
+                Ohio. I really enjoy creating beautiful applications for the
+                web. My goal is to build scalable, performant, and user friendly
+                applications.
+              </Text>
+            </Fade>
             <Spacer />
-            <Text
-              small
-              style={{ color: theme === "dark" ? "gray" : "GrayText" }}
-            >
-              Technology I&#39;ve recently been working with:
-            </Text>
+            <Fade left ssrReveal delay={200}>
+              <Text
+                small
+                style={{ color: theme === "dark" ? "gray" : "GrayText" }}
+              >
+                Technology I&#39;ve recently been working with:
+              </Text>
+            </Fade>
             <Spacer />
             <div className={styles.techContainer}>
               {recentTech.slice(0, 3).map((tech, index) => {
                 return (
                   <div key={index} style={{ width: "100%" }}>
-                    <div className={styles.tech}>
-                      <ChevronsRight size={14} color="#0070F3" />
-                      <Text
-                        span
-                        font="12px"
-                        className={styles.techName}
-                        ml={0.3}
-                        style={{
-                          color: theme === "dark" ? "gray" : "GrayText",
-                        }}
-                      >
-                        {tech}
-                      </Text>
-                    </div>
+                    <Flip left delay={1200} ssrReveal>
+                      <div className={styles.tech}>
+                        <ChevronsRight size={14} color="#0070F3" />
+                        <Text
+                          span
+                          font="12px"
+                          className={styles.techName}
+                          ml={0.3}
+                          style={{
+                            color: theme === "dark" ? "gray" : "GrayText",
+                          }}
+                        >
+                          {tech}
+                        </Text>
+                      </div>
+                    </Flip>
                   </div>
                 );
               })}
@@ -82,20 +89,22 @@ export const About = () => {
               {recentTech.slice(3).map((tech, index) => {
                 return (
                   <div key={index} style={{ width: "100%" }}>
-                    <div className={styles.tech}>
-                      <ChevronsRight size={14} color="#0070F3" />
-                      <Text
-                        span
-                        font="12px"
-                        className={styles.techName}
-                        ml={0.3}
-                        style={{
-                          color: theme === "dark" ? "gray" : "GrayText",
-                        }}
-                      >
-                        {tech}
-                      </Text>
-                    </div>
+                    <Flip left delay={1200} ssrReveal>
+                      <div className={styles.tech}>
+                        <ChevronsRight size={14} color="#0070F3" />
+                        <Text
+                          span
+                          font="12px"
+                          className={styles.techName}
+                          ml={0.3}
+                          style={{
+                            color: theme === "dark" ? "gray" : "GrayText",
+                          }}
+                        >
+                          {tech}
+                        </Text>
+                      </div>
+                    </Flip>
                     <Spacer />
                   </div>
                 );
@@ -110,13 +119,15 @@ export const About = () => {
                 style={{ background: theme === "dark" ? "#000" : "#fff" }}
               ></span>
             </span>
-            <Image
-              src="/images/headshot.jpg"
-              height={300}
-              width={275}
-              className={styles.image}
-              alt="headshot"
-            />
+            <Flip ssrReveal>
+              <Image
+                src="/images/headshot.jpg"
+                height={300}
+                width={275}
+                className={styles.image}
+                alt="headshot"
+              />
+            </Flip>
           </div>
           {/* </div> */}
         </div>

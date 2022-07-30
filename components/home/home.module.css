@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .wrapper {
   padding: 16px 30px;
   height: calc(100vh);
@@ -7,18 +14,31 @@
 .container {
   max-width: 850px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100%;
 }
 
 .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
 .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -35,8 +55,19 @@
 
 .header {
   font-size: min(max(36px, 8vw), 70px);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#1fa2ff),
+    color-stop(#12d8fa),
+    to(#62ffa4)
+  );
+  background: -o-linear-gradient(left, #1fa2ff, #12d8fa, #62ffa4);
   background: linear-gradient(to right, #1fa2ff, #12d8fa, #62ffa4);
+  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-animation: gradient 5s infinite;
   animation: gradient 5s infinite;
   font-weight: 700;
 }
@@ -50,11 +81,24 @@
   margin-top: 16px;
 }
 
-@keyframes gradient {
+@-webkit-keyframes gradient {
   from {
+    -webkit-filter: hue-rotate(0deg);
     filter: hue-rotate(0deg);
   }
   to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes gradient {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
 }
