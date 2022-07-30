@@ -93,7 +93,7 @@
 .error {
   position: absolute;
   left: 4px;
-  top: 26px;
+  top: -10px;
   pointer-events: none;
   -webkit-transition: 300ms;
   -o-transition: 300ms;
@@ -101,7 +101,7 @@
 }
 
 .messageError {
-  top: 118px;
+  top: -10px;
 }
 
 @media screen and (max-width: 600px) {
