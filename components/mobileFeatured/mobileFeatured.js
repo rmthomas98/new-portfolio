@@ -66,7 +66,9 @@ export const MobileFeatured = () => {
                     {project.tech.map((tech, index) => {
                       return (
                         <React.Fragment key={index}>
-                          <Badge scale={1 / 2}>{tech}</Badge>
+                          <Badge scale={1 / 2} mb={0.4}>
+                            {tech}
+                          </Badge>
                           <Spacer w={0.3} />
                         </React.Fragment>
                       );
