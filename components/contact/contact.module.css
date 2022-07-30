@@ -74,6 +74,12 @@
   top: 118px;
 }
 
+@media screen and (max-width: 600px) {
+  .formFlexContainer {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .flexContainer {
     flex-direction: column;

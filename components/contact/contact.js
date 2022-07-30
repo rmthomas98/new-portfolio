@@ -104,7 +104,7 @@ export const Contact = () => {
               >
                 (937)-789-8988
               </Text>
-              <a href="tel:9377898888">
+              <a href="tel:9377898988">
                 <Button scale={1 / 2}>Call Now</Button>
               </a>
             </Card.Content>
@@ -139,7 +139,7 @@ export const Contact = () => {
                 * Please enter your name
               </Text>
             </div>
-            <Spacer w={2} />
+            <Spacer w={2} h={2} />
             <div className={styles.inputContainer}>
               <Input
                 htmlType="email"
