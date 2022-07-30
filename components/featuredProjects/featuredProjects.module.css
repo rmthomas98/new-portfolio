@@ -115,4 +115,8 @@
   .description {
     max-width: 65%;
   }
+
+  .imageContainer {
+    width: 100%;
+  }
 }

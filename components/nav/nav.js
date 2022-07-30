@@ -6,17 +6,19 @@ import { useScrollDirection } from "use-scroll-direction";
 import { useWindowWidth } from "@react-hook/window-size";
 import { MobileNav } from "../mobileNav/mobileNav";
 import Scroll from "react-scroll";
+import useScrollPosition from "@react-hook/window-scroll";
 
 export const Nav = ({ theme, setTheme }) => {
   const { scrollDirection } = useScrollDirection();
   const [isActive, setIsActive] = useState(true);
   const [navIsActive, setNavIsActive] = useState(false);
   const scroller = Scroll.scroller;
+  const scrollPos = useScrollPosition(60);
 
   useEffect(() => {
     if (scrollDirection === "UP") {
       setIsActive(true);
-    } else if (scrollDirection === "DOWN") {
+    } else if (scrollDirection === "DOWN" && scrollPos > 60) {
       setIsActive(false);
     }
   }, [scrollDirection]);
