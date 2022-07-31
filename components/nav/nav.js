@@ -101,7 +101,7 @@ export const Nav = ({ theme, setTheme }) => {
             <Spacer w={0.4} />
             <Tooltip text={"LinkedIn"} placement="bottomEnd" py={0.6}>
               <a
-                href="https://www.linkedin.com/in/ryan-thomas-4b3b961a5/"
+                href="https://www.linkedin.com/in/rmthomas-dev/"
                 target="_blank"
                 rel="noreferrer"
               >
