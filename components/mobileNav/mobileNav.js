@@ -34,7 +34,6 @@ export const MobileNav = ({
       </div>
 
       <Drawer.Content>
-        <Fade cascade right delay={50} ssrReveal>
           <div className={styles.drawerContainer}>
             <Text
               h5
@@ -94,7 +93,6 @@ export const MobileNav = ({
               Contact
             </Text>
           </div>
-        </Fade>
       </Drawer.Content>
     </Drawer>
   );
