@@ -37,8 +37,8 @@ export const Footer = () => {
           </a>
           <Spacer w={0.4} />
           <a
-            href="https://www.linkedin.com/in/ryan-thomas-4b3b961a5/"
-            target="_blank"
+            href="https://www.linkedin.com/in/rmthomas-dev/"
+            At target="_blank"
             rel="noreferrer"
           >
             <Button icon={<Linkedin />} auto scale={1 / 2} px={0.6} />
