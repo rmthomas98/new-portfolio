@@ -20,11 +20,15 @@ export const featured = [
   },
   {
     title: "Accounts Receivable",
+    description:
+      "This is a fork of an accounts receivable tool that I made for the current company I work at.",
     images: {
       dark: "/images/aone.PNG",
       light: "/images/aone-light.PNG",
     },
     tech: ["Next.js", "MongoDB", "GeistUI"],
+    link: "https://accountsreceivablefork.vercel.app/",
+    github: null,
   },
   {
     title: "Skyyon Liquor",

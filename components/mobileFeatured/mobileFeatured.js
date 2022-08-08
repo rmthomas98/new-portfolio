@@ -77,9 +77,11 @@ export const MobileFeatured = () => {
                   </Card.Content>
                   <Card.Footer>
                     <a href={project.github} target="_blank" rel="noreferrer">
-                      <Button scale={2 / 3} icon={<Github />} auto>
-                        Github
-                      </Button>
+                      {project.github && (
+                        <Button scale={2 / 3} icon={<Github />} auto>
+                          Github
+                        </Button>
+                      )}
                     </a>
                     <a href={project.link} target="_blank" rel="noreferrer">
                       <Button scale={2 / 3} icon={<ExternalLink />} auto>
