@@ -166,8 +166,8 @@ export const FeaturedProjects = () => {
                     style={{ color: theme === "dark" ? "gray" : "GrayText" }}
                     mt={0}
                   >
-                    This is a fork of a tool I made for the current company I
-                    work at.
+                    This is a fork of an accounts receivable tool that I made
+                    for the current company I work at.
                   </Text>
                 </Fade>
                 <div className={styles.badgeContainerTwo}>
