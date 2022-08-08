@@ -20,14 +20,10 @@ export const featured = [
   },
   {
     title: "Accounts Receivable",
-    description:
-      "This was made for a company that was looking for a way to keep track of their accounts receivable while saving time.",
     images: {
       dark: "/images/aone.PNG",
       light: "/images/aone-light.PNG",
     },
-    github: "https://github.com/rmthomas98/aoneadmin",
-    link: "https://aoneadmin.vercel.app",
     tech: ["Next.js", "MongoDB", "GeistUI"],
   },
   {
