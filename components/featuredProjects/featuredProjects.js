@@ -166,8 +166,8 @@ export const FeaturedProjects = () => {
                     style={{ color: theme === "dark" ? "gray" : "GrayText" }}
                     mt={0}
                   >
-                    This was made for a company that was looking for a way to
-                    keep track of their accounts receivable while saving time.
+                    This is a fork of a tool I made for the current company I
+                    work at.
                   </Text>
                 </Fade>
                 <div className={styles.badgeContainerTwo}>
