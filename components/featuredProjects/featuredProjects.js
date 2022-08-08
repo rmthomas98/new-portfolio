@@ -180,25 +180,9 @@ export const FeaturedProjects = () => {
                 <Divider mt={1.4} mb={1.2} />
                 <div className={styles.buttonContainerTwo}>
                   <Fade ssrReveal delay={700}>
-                    <Tooltip text={"Github"} placement="bottomStart" py={0.6}>
-                      <a
-                        href="https://github.com/rmthomas98/aoneadmin"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Button
-                          scale={2 / 3}
-                          iconRight={<Github />}
-                          auto
-                          px={0.6}
-                          margin={0}
-                        />
-                      </a>
-                    </Tooltip>
-                    <Spacer w={0.6} />
                     <Tooltip text={"Live"} placement="bottomStart" py={0.6}>
                       <a
-                        href="https://aoneadmin.vercel.app"
+                        href="https://accountsreceivablefork.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                       >
